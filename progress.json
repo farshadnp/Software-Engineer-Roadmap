@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-08",
+  "plan_version": 2,
+  "learner": {
+    "target": "Mid-level Software Engineer, backend .NET",
+    "daily_hours": 3,
+    "reported_background": [
+      "C# fundamentals",
+      "ASP.NET Core familiarity",
+      "routine Git"
+    ],
+    "sql_level": "unassessed",
+    "target_market": null,
+    "learning_mode": "Concept-first book mentoring; interactive code review and why explanations; occasional learner coding"
+  },
+  "start_date": "2026-09-06",
+  "planned_hours": 168,
+  "next_session_id": "W1D2",
+  "source_pdf": "C:\\Users\\f.nematpur\\Desktop\\Mastering ASP.NET Core 10.pdf",
+  "status_values": [
+    "not_started",
+    "studying",
+    "practicing",
+    "awaiting_review",
+    "verified",
+    "needs_review",
+    "blocked"
+  ],
+  "sessions": [
+    {
+      "id": "W1D1",
+      "title": "API and responsibility boundaries; conversational baseline",
+      "reference": "Chapter 3, sections 3.1.1-3.1.2; PDF pages 76-77",
+      "acceptance": "Explain HTTP-specific behavior versus shared application rules; review a small example. Environment and practical baseline are deferred until the first executable exercise.",
+      "status": "needs_review",
+      "taught_topics": [
+        "API contract and HTTP versus application rules",
+        "Boundary validation versus domain invariants",
+        "Entity, Service, Repository or Storage Broker responsibilities",
+        "Domain factory, private EF constructor, and materialization",
+        "Exception classification and safe ProblemDetails",
+        "Unit tests, integration tests, AAA, Theory, and boundary testing",
+        "EF Core ChangeTracker and database-generated values"
+      ],
+      "read_sections": [],
+      "evidence": [],
+      "mentor_evidence": [
+        {
+          "date": "2026-09-08",
+          "path": "tmp/ef-generated-values/Program.cs",
+          "command": "dotnet run --no-restore",
+          "result": "PASS: SQLite INSERT RETURNING populated database-generated Id and CreatedAt on the same tracked entity reference after SaveChangesAsync; this is mentor-run evidence, not learner execution."
+        }
+      ],
+      "score": {
+        "explain": 2,
+        "implement_debug": 1,
+        "verify": null,
+        "tradeoffs": 2
+      },
+      "actual_minutes": null,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": [],
+      "pending_question": "Practical review remains: execute or review runnable Note invariant tests and independently explain the request-to-storage flow.",
+      "lesson_path": "lessons/W1D1.md"
+    },
+    {
+      "id": "W1D2",
+      "title": "C# برای بک‌اند",
+      "reference": "مکمل؛ ۲۶.۲.۳ در حد مرور",
+      "acceptance": "async/await، CancellationToken، nullable، exceptions، LINQ و IEnumerable/IQueryable؛ یک باگ async را توضیح و اصلاح کن.",
+      "status": "studying",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W1D3",
+      "title": "اولین API",
+      "reference": "۳؛ ۲۹.۲",
+      "acceptance": "نیازمندی NoteKeeper را در یک صفحه بنویس؛ ایجاد و خواندن Note با ورودی معتبر و نامعتبر؛ کد حیاتی را ابتدا خودت بنویس.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W1D4",
+      "title": "Pipeline",
+      "reference": "۴",
+      "acceptance": "ترتیب middleware و مسیر رفت‌وبرگشت را رسم کن؛ correlation ID و خطای کنترل‌شده؛ اثر جابه‌جایی middleware را آزمایش کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W1D5",
+      "title": "DI و تنظیمات",
+      "reference": "۶ و ۸",
+      "acceptance": "Transient/Scoped/Singleton، Options و secrets؛ یک captive dependency را تشخیص بده؛ تنظیمات نامعتبر در شروع fail شود.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W1D6",
+      "title": "تست و Git",
+      "reference": "۲۵.۱–۲۵.۲؛ مکمل Git",
+      "acceptance": "تست قانون دامنه؛ branch، diff، merge و conflict؛ یک تغییر کوچک Agent را خط‌به‌خط بررسی کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D1",
+      "title": "قرارداد و Routing",
+      "reference": "۷؛ ۱۲.۱–۱۲.۲",
+      "acceptance": "قرارداد Notes و Tags، روش HTTP، status code و مثال request/response را قبل از کد بنویس.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D2",
+      "title": "DTO و Validation",
+      "reference": "۱۷ منتخب مرتبط با API",
+      "acceptance": "Create/Update DTO، مرز validation و قوانین دامنه؛ ورودی اضافی نباید مالک یا فیلد سیستمی را عوض کند.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D3",
+      "title": "مدیریت خطا",
+      "reference": "۱۲.۵",
+      "acceptance": "Problem Details و exception mapping؛ stack trace به مصرف‌کننده نرسد؛ تست خطای شناخته‌شده و ناشناخته.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D4",
+      "title": "جست‌وجو و صفحه‌بندی",
+      "reference": "۱۲.۲",
+      "acceptance": "حداکثر page size، sort پایدار و فیلتر؛ مجموعه خالی و ورودی نامعتبر را تست کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D5",
+      "title": "قرارداد قابل اجرا",
+      "reference": "۱۲.۷؛ ۲۵.۳",
+      "acceptance": "OpenAPI و integration test میزبان واقعی برنامه؛ تطبیق پاسخ واقعی با قرارداد.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W2D6",
+      "title": "بازبینی یک قابلیت",
+      "reference": "مرور هفته",
+      "acceptance": "Agent فقط یک endpoint بسازد؛ تو تست منفی مستقل، diff review و توضیح سازگاری قرارداد را انجام بده.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D1",
+      "title": "مدل داده",
+      "reference": "۱۱.۵؛ ۲۹.۶",
+      "acceptance": "ERD برای Note/Tag/Attachment/User؛ کلید، FK، constraint و مالکیت؛ مدل را با نیازمندی تطبیق بده.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D2",
+      "title": "SQL کاربردی",
+      "reference": "مکمل SQL",
+      "acceptance": "JOIN، GROUP BY، index و transaction؛ سه query را دستی بنویس و خروجی را توضیح بده.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D3",
+      "title": "EF و Migration",
+      "reference": "۱۱.۴، ۱۱.۸؛ ۳۰.۲",
+      "acceptance": "یک provider رابطه‌ای انتخاب کن؛ migration و seed روی DB تازه؛ تغییر schema را روی داده موجود تمرین کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D4",
+      "title": "خواندن مؤثر",
+      "reference": "۱۱.۷",
+      "acceptance": "projection، tracking و N+1؛ SQL تولیدشده و تعداد query را ثبت و مقایسه کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D5",
+      "title": "هم‌زمانی و تراکنش",
+      "reference": "۱۲.۵.۳؛ مکمل",
+      "acceptance": "تست دو ویرایش هم‌زمان و شکست میانه عملیات؛ سیاست conflict و مرز transaction را ثبت کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W3D6",
+      "title": "تست دیتابیس",
+      "reference": "۲۵.۳؛ مکمل provider واقعی",
+      "acceptance": "سناریوهای constraint، query و concurrency روی provider انتخابی؛ تست صرفاً EF InMemory شاهد رفتار رابطه‌ای نیست.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D1",
+      "title": "مدل تهدید",
+      "reference": "۱۰؛ مکمل threat modeling",
+      "acceptance": "دارایی‌ها، مرزهای اعتماد و مسیرهای سوءاستفاده NoteKeeper؛ تفاوت authentication و authorization.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D2",
+      "title": "هویت و نشست",
+      "reference": "۱۰",
+      "acceptance": "انتخاب سازوکار استاندارد هویت و توضیح cookie/token؛ تست ورود معتبر و نامعتبر؛ secrets بیرون repo.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D3",
+      "title": "Authorization",
+      "reference": "۱۰؛ ۱۲.۶",
+      "acceptance": "مالکیت Note در read/update/delete؛ policy و تست دسترسی بین دو کاربر؛ صرف داشتن login کافی نیست.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D4",
+      "title": "مرز HTTP",
+      "reference": "۱۲.۶",
+      "acceptance": "CORS، CSRF متناسب با auth انتخابی، HTTPS و rate limiting؛ هر تنظیم با سناریوی مشخص توجیه شود.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D5",
+      "title": "فایل امن",
+      "reference": "۱۵ منتخب",
+      "acceptance": "حد حجم، نام امن، storage خارج مسیر اجرای محتوا، مجوز download؛ یک آپلود و دانلود مالک‌محور ساده.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W4D6",
+      "title": "بازبینی امنیتی",
+      "reference": "مرور هفته",
+      "acceptance": "کد Agent را برای overposting، دسترسی افقی و log حاوی اطلاعات حساس بررسی کن؛ یافته‌ها و regression test ثبت شوند.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D1",
+      "title": "خواندن معماری کتاب",
+      "reference": "۲۹.۳",
+      "acceptance": "Brokers/Services/Orchestrations/Exposers را روی یک use case ردیابی کن؛ The Standard انتخاب کتاب است، الزام عمومی ASP.NET نیست.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D2",
+      "title": "مقایسه معماری",
+      "reference": "مکمل",
+      "acceptance": "یک slice کوچک را با رویکرد feature-based مقایسه کن؛ هزینه layered/vertical slice و تصمیم monolith را بنویس.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D3",
+      "title": "قوانین دامنه",
+      "reference": "۳۰.۳",
+      "acceptance": "قانون مالکیت/ویرایش را از transport جدا کن؛ وابستگی‌ها و مرز transaction مشخص باشد.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D4",
+      "title": "ADR",
+      "reference": "۲۹؛ مکمل",
+      "acceptance": "سه تصمیم: ساختار، DB، auth؛ برای هرکدام مسئله، گزینه‌ها، انتخاب، پیامد و زمان بازنگری بنویس.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D5",
+      "title": "سناریوی تغییر",
+      "reference": "مکمل system design",
+      "acceptance": "افزودن اشتراک‌گذاری Note را فقط طراحی کن؛ تغییر مجوز، schema و API را مشخص کن؛ scope پیاده‌سازی را افزایش نده.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W5D6",
+      "title": "Refactor محدود",
+      "reference": "۳۰.۲–۳۰.۴",
+      "acceptance": "یک refactor کوچک بدون تغییر رفتار با Agent؛ قبل/بعد dependency map و تست؛ از بازنویسی کل پروژه پرهیز کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D1",
+      "title": "Logging",
+      "reference": "۹",
+      "acceptance": "structured logs و correlation ID؛ یک خطای چندمرحله‌ای را از log دنبال کن؛ داده حساس را حذف کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D2",
+      "title": "اندازه‌گیری پایه",
+      "reference": "۲۶.۱ و ۲۶.۴",
+      "acceptance": "سناریوی بار، dataset، محیط و warmup ثابت؛ ثبت p50/p95، throughput و نرخ خطا، بدون ادعای ظرفیت production.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D3",
+      "title": "رفع گلوگاه",
+      "reference": "۲۶.۲",
+      "acceptance": "profiling ساده و query timings؛ یک bottleneck واقعی را رفع و همان سناریو را دوباره اجرا کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D4",
+      "title": "Caching",
+      "reference": "۱۴؛ ۲۶.۳",
+      "acceptance": "یک read پرتکرار، TTL و invalidation؛ تست تغییر داده و جداسازی مالک؛ اگر فایده اندازه‌گیری نشد cache را توجیه نکن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D5",
+      "title": "تاب‌آوری",
+      "reference": "مکمل؛ ۲۸ منتخب",
+      "acceptance": "timeout، cancellation و retry محدود؛ توضیح خطر retry عملیات نوشتن و idempotency؛ dependency کند را شبیه‌سازی کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W6D6",
+      "title": "گزارش مهندسی",
+      "reference": "مرور هفته",
+      "acceptance": "گزارش قبل/بعد همراه محدودیت آزمایش؛ Agent راهکار بدهد، تو شواهد و trade-off را بررسی کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D1",
+      "title": "بازبینی مجموعه تست",
+      "reference": "۲۵",
+      "acceptance": "نقشه ریسک به تست؛ happy path، failure، auth و concurrency؛ تست‌های صرفاً تقلید پیاده‌سازی را اصلاح کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D2",
+      "title": "تست رگرسیون",
+      "reference": "۲۵.۳؛ ۳۰.۸",
+      "acceptance": "سه خرابی عمدی در شاخه تمرینی؛ تست باید آن‌ها را کشف کند؛ زمان و نتیجه را ثبت کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D3",
+      "title": "CI",
+      "reference": "۲۵.۵؛ مکمل",
+      "acceptance": "build/test در CI با DB تست؛ secret management و failure قابل فهم؛ در نبود remote اجرای معادل محلی را جدا برچسب بزن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D4",
+      "title": "بسته‌بندی",
+      "reference": "۲۷.۱–۲۷.۲",
+      "acceptance": "Docker و تنظیمات محیط؛ health check؛ اجرای API و DB محلی با دستور مستند.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D5",
+      "title": "Migration و بازیابی",
+      "reference": "۲۷.۳؛ مکمل",
+      "acceptance": "روی محیط تمرینی backup/restore و migration rehearsal؛ rollback کد لزوماً rollback داده نیست.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W7D6",
+      "title": "Release rehearsal",
+      "reference": "۲۷",
+      "acceptance": "از مسیر تازه اجرا کن؛ smoke test و runbook خرابی؛ استقرار عمومی/هزینه‌دار جزو این تمرین الزامی نیست.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D1",
+      "title": "تکمیل نمونه‌کار",
+      "reference": "۲۹–۳۰ مرور",
+      "acceptance": "بستن باگ‌های مهم؛ README شامل مسئله، اجرا، معماری، تست، محدودیت‌ها و نقش Agent؛ بدون افزودن قابلیت بزرگ.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D2",
+      "title": "مصاحبه بک‌اند",
+      "reference": "مرور ۴،۶،۱۰،۱۱،۱۲",
+      "acceptance": "توضیح request lifecycle، DI، async، SQL و authorization با مثال پروژه؛ ندانسته‌ها ثبت شود.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D3",
+      "title": "System design",
+      "reference": "مکمل",
+      "acceptance": "طراحی سرویس یادداشت برای افزایش بار: فرض بار، DB، cache، storage، failure و trade-off؛ عددها را فرض اعلام کن.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D4",
+      "title": "Debug و Code review",
+      "reference": "مرور",
+      "acceptance": "باگ ناشناخته و PR دارای اشکال امنیت/هم‌زمانی؛ قبل از درخواست کمک فرضیه و شاهد بنویس.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D5",
+      "title": "رزومه و شواهد",
+      "reference": "مکمل اپلای",
+      "acceptance": "سه bullet فقط بر اساس دستاورد واقعی؛ دو داستان STAR؛ تطبیق با ۳ آگهی منتخب پس از مشخص شدن بازار هدف.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    },
+    {
+      "id": "W8D6",
+      "title": "ارزیابی نهایی",
+      "reference": "همه محورهای اصلی",
+      "acceptance": "دمو و مصاحبه آزمایشی؛ نمره مستقل از Agent؛ برنامه جبرانی برای محورهای زیر حد لازم.",
+      "status": "not_started",
+      "taught_topics": [],
+      "read_sections": [],
+      "evidence": [],
+      "score": {
+        "explain": null,
+        "implement_debug": null,
+        "verify": null,
+        "tradeoffs": null
+      },
+      "actual_minutes": 0,
+      "verified_at": null,
+      "review_due": [],
+      "blockers": []
+    }
+  ],
+  "weekly_gates": [
+    {
+      "id": "G1",
+      "criterion": "بدون Agent مسیر HTTP تا DB را توضیح بده؛ خطای lifetime را پیدا کن؛ API کوچک را اجرا کن و یک تست معنادار را عمداً خراب و سپس اصلاح کن.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G2",
+      "criterion": "از روی قرارداد، API را برای success/invalid/not-found/conflict تست کن؛ تفاوت 401 و 403 و تصمیم PUT/PATCH را توضیح بده.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G3",
+      "criterion": "SQL یک query مهم را بخوان؛ N+1 را اصلاح کن؛ دو ویرایش هم‌زمان نباید بی‌صدا یکدیگر را پاک کنند؛ migration روی دیتابیس تازه اجرا شود.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G4",
+      "criterion": "کاربر A نتواند Note یا فایل کاربر B را با حدس ID بخواند/تغییر دهد؛ تست‌های anonymous، forbidden و مالک مجاز بگذرند.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G5",
+      "criterion": "با یک سناریوی تغییر، مرزها را دفاع کن؛ سه ADR با گزینه جایگزین و هزینه داشته باش؛ توضیح بده کدام abstraction واقعاً لازم است.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G6",
+      "criterion": "یک کندی را با داده تشخیص بده؛ p95 و خطا قبل/بعد با بار و محیط ثابت ثبت شود؛ cache داده کاربران را مخلوط نکند.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G7",
+      "criterion": "پروژه از checkout تازه طبق README اجرا و تست شود؛ CI خطا را بگیرد؛ migration، health check و روش rollback/restore مستند باشد.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    },
+    {
+      "id": "G8",
+      "criterion": "دموی ۱۰ دقیقه‌ای، مصاحبه فنی و طراحی بدون Agent، PR review و رفع باگ ناشناخته؛ شکاف‌های باقی‌مانده صریح ثبت شوند.",
+      "status": "not_started",
+      "evidence": [],
+      "reviewed_at": null
+    }
+  ],
+  "open_questions": [
+    "عمق فعلی SQL و C#/ASP.NET در ارزیابی آغاز مشخص شود",
+    "بازار و آگهی‌های هدف"
+  ],
+  "optional_backlog": [
+    "SignalR فصل ۱۳",
+    "OData بخش ۱۲.۴",
+    "ذخیره‌سازی پیشرفته فصل ۱۵",
+    "Razor/MVC/Blazor فصل‌های ۱۶،۱۸ تا ۲۲",
+    "MAUI فصل‌های ۲۳ و ۲۴",
+    "UI بخش‌های ۳۰.۵–۳۰.۶"
+  ],
+  "automation": {
+    "id": "automation",
+    "status": "ACTIVE",
+    "daily_time": "19:00",
+    "intended_timezone": "Asia/Tehran",
+    "weekly_review_day": "Friday",
+    "stop_review_date": "2026-11-01"
+  }
+}
