@@ -2,11 +2,14 @@
 
 Open `BackendLearning.sln` in Visual Studio with .NET 10 SDK support.
 Set `BackendLearning.Labs` as the startup project if needed.
-Run with Ctrl+F5 for output, or F5 for debugging; choose 1-6.
+Run with Ctrl+F5 for output, or F5 for debugging; choose 1-7.
 
 These are mentor-written examples, not copied source code from the book.
 Week01/Day02 contains C# prerequisites used throughout the backend roadmap.
-Future examples will follow WeekXX/DayXX/Topic/ExampleNN_Name.cs.
+Future examples will follow WeekXX/DayXX/00_Topic/ExampleNN_Name.cs.
+Lesson folders use zero-based two-digit prefixes. C# namespaces remain descriptive
+without digit prefixes because identifiers cannot start with a digit.
+Current order: 00_NullableReferences, 01_EntityAndPersistence, 02_ResourceCleanup.
 
 ## Start with Example01_NonNullableParameter.cs
 
@@ -38,12 +41,12 @@ dotnet run --project src/BackendLearning.Labs -- --verify
 ```
 
 The intentional CS8625 warning is part of example 1, not a production convention.
-The verification path runs all six examples and fails on unexpected results.
+The verification path runs all seven examples and fails on unexpected results.
 Mentor execution does not count as learner mastery. Record learner observations separately.
 
 ## Entity and persistence lessons (examples 4-6)
 
-Open Week01/Day02/EntityAndPersistence in Solution Explorer.
+Open Week01/Day02/01_EntityAndPersistence in Solution Explorer.
 
 - Example04_RenameInvariant: invalid rename preserves state; valid rename updates both titles.
 - Example05_CompositeUniqueness: the composite key is (UserId, NormalizedTitle).
@@ -62,3 +65,9 @@ classifies a known constraint failure; the API handler chooses HTTP 409.
 No HTTP handler is implemented in this console lesson.
 
 Review: why does rethrow prevent apparent success without reverting the in-memory title?
+
+## Resource cleanup (example 7)
+
+Open Week01/Day02/02_ResourceCleanup. Example07_FinallyAndUsing demonstrates
+finally before return and automatic Dispose on both success and exception paths.
+The local README provides expected output and breakpoint guidance.
