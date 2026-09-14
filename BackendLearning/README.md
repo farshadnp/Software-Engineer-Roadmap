@@ -2,7 +2,7 @@
 
 Open `BackendLearning.sln` in Visual Studio with .NET 10 SDK support.
 Set `BackendLearning.Labs` as the startup project if needed.
-Run with Ctrl+F5 for output, or F5 for debugging; choose 1, 2 or 3.
+Run with Ctrl+F5 for output, or F5 for debugging; choose 1-6.
 
 These are mentor-written examples, not copied source code from the book.
 Week01/Day02 contains C# prerequisites used throughout the backend roadmap.
@@ -38,5 +38,27 @@ dotnet run --project src/BackendLearning.Labs -- --verify
 ```
 
 The intentional CS8625 warning is part of example 1, not a production convention.
-The verification path runs all three examples and fails on unexpected results.
+The verification path runs all six examples and fails on unexpected results.
 Mentor execution does not count as learner mastery. Record learner observations separately.
+
+## Entity and persistence lessons (examples 4-6)
+
+Open Week01/Day02/EntityAndPersistence in Solution Explorer.
+
+- Example04_RenameInvariant: invalid rename preserves state; valid rename updates both titles.
+- Example05_CompositeUniqueness: the composite key is (UserId, NormalizedTitle).
+- Example06_CatchAndRethrow: compare swallowing an exception with rethrowing it.
+- Note.cs: shared creation/rename rules and custom exception declarations.
+- SnapshotNoteRepository.cs: independent stored snapshots for the failure demonstration.
+
+For example 6, set breakpoints on `if (rethrow) throw;` and `return note;`.
+Run option 6. The first scenario reaches return after a failed save; the second
+propagates the conflict to the caller. Both leave the changed object in memory.
+Inspect `note.Title` and `repository.Read(note.Id).Title` in RunScenarioAsync.
+
+These simulations do not test database constraints, EF tracking, or concurrent requests.
+A real database needs a unique constraint on the composite key. Infrastructure
+classifies a known constraint failure; the API handler chooses HTTP 409.
+No HTTP handler is implemented in this console lesson.
+
+Review: why does rethrow prevent apparent success without reverting the in-memory title?
